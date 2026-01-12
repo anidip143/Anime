@@ -263,23 +263,23 @@ document.addEventListener('click', function (e) {
 const animeData = {
   jjk: {
     title: "Jujutsu Kaisen Season 2",
-    trailer: "mp4/jujutsu.mp4"
+    trailer: "https://res.cloudinary.com/dfl2cxofj/video/upload/v1768228878/jujutsu_ghs7ey.mp4"
   },
   aot: {
     title: "Attack on Titan Final Season",
-    trailer: "mp4/aot.mp4"
+    trailer: "https://res.cloudinary.com/dfl2cxofj/video/upload/v1768228892/aot_i0c2pe.mp4"
   },
   demon: {
     title: "Demon Slayer: Entertainment District",
-    trailer: "mp4/demonslayer.mp4"
+    trailer: "https://res.cloudinary.com/dfl2cxofj/video/upload/v1768228915/demonslayer_rczuy6.mp4"
   },
   sakamoto: {
     title: "Sakamoto Days Part 2",
-    trailer: "mp4/sakamoto.mp4"
+    trailer: "https://res.cloudinary.com/dfl2cxofj/video/upload/v1768228907/sakamoto_qfgvzi.mp4"
   },
   dandadan: {
     title: "Dandadan Season 2",
-    trailer: "mp4/dandadan.mp4"
+    trailer: "https://res.cloudinary.com/dfl2cxofj/video/upload/v1768228904/dandadan_qxdm2b.mp4"
   },
   deathnote: {
     title: "Death Note",
