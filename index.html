@@ -1,0 +1,754 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniAnime | Watch Anime Online</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scroll-container">
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <div class="preloader-text">Loading Amazing Anime...</div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <a href="#home" class="logo">
+            <img src="https://imgs.search.brave.com/OSKkYd_hUP_Xwo1BcyCSFCUA9j9v2E-qp8O6Z7CSbWU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93MC5w/ZWFrcHguY29tL3dh/bGxwYXBlci8yOTkv/ODUwL0hELXdhbGxw/YXBlci1mYWlyeS10/YWlsLWxvZ28tYW5p/bWUtZmFpcnktdGFp/bC10aHVtYm5haWwu/anBn" alt="AniAnime Logo">
+            AniAnime
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#popular">Popular</a></li>
+            <li><a href="#new-releases">New Releases</a></li>
+            <li><a href="#genres">Genres</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Search anime...">
+                <i class="fas fa-search"></i>
+            </li>
+        </ul>
+    </header>
+    
+<!-- Login / Signup Buttons -->
+<div class="auth-buttons">
+    <button id="loginBtn">Login</button>
+    <button id="signupBtn">Sign Up</button>
+</div>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <input type="text" id="loginUser" placeholder="Username">
+        <input type="password" id="loginPass" placeholder="Password">
+        <button id="loginSubmit">Login</button>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sign Up</h2>
+        <input type="text" id="signupUser" placeholder="Username">
+        <input type="password" id="signupPass" placeholder="Password">
+        <button id="signupSubmit">Sign Up</button>
+    </div>
+</div>
+
+<!-- Logout Button (hidden initially) -->
+<button id="logoutBtn" style="display:none;">Logout</button>
+
+    <!-- HERO SECTION - CAROUSEL -->
+    <section class="hero" id="home">
+        <div class="hero-carousel">
+            <div class="carousel-item active jjk-bg">
+                <div class="hero-content">
+                    <h1>Jujutsu Kaisen Season 2</h1>
+                    <p>Witness the intense battles and gripping story of Jujutsu Sorcerers protecting humanity from curses.</p>
+                    <div class="hero-buttons">
+                         <a href="#" class="btn btn-primary" onclick="openPlayer('jjk')">
+  <i class="fas fa-play"></i> Watch Now
+</a>
+
+                       <a href="#" class="btn btn-secondary" onclick="openJJKDetails()">
+  <i class="fas fa-info-circle"></i> Details
+</a>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item aot-bg">
+                <div class="hero-content">
+                    <h1>Attack on Titan Final Season</h1>
+                    <p>The epic conclusion to humanity's fight for survival against the Titans.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary" onclick="openPlayer('aot')">
+  <i class="fas fa-play"></i> Watch Now
+</a>
+
+                       <a href="#" class="btn btn-secondary" onclick="openAOTDetails()">
+  <i class="fas fa-info-circle"></i> Details
+</a>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item demon-bg">
+                <div class="hero-content">
+                    <h1>Demon Slayer: Entertainment District</h1>
+                    <p>Tanjiro and his friends investigate the mysterious disappearances in the entertainment district.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary" onclick="openPlayer('demon')">
+  <i class="fas fa-play"></i> Watch Now
+</a>
+
+                       <a href="#" class="btn btn-secondary" onclick="openDemonSlayerDetails()">
+  <i class="fas fa-info-circle"></i> Details
+</a>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item sakamoto-bg">
+                <div class="hero-content">
+                    <h1>Sakamoto Days Part 2</h1>
+                    <p>The story follows Taro Sakamoto, a legendary hitman who retired from his violent past after falling in love with Aoi, his wife. He has built a new, peaceful life for himself and his family by opening a convenience store. However, when his past comes back to haunt him, he must once again engage in over-the-top, no-holds-barred battles to protect his loved ones from assassins.  </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary" onclick="openPlayer('sakamoto')">
+  <i class="fas fa-play"></i> Watch Now
+</a>
+
+
+                       <a href="#" class="btn btn-secondary" onclick="openSakamotoDetails()">
+  <i class="fas fa-info-circle"></i> Details
+</a>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item dandadan-bg">
+                <div class="hero-content">
+                    <h1>Dandadan season 2</h1>
+                    <p>The second season covered the "Cursed House" and "Evil Eye" arcs from the original manga. It followed high schoolers Momo and Okarun as they continued to challenge paranormal and extraterrestrial entities with their newfound powers. </p>
+                    <div class="hero-buttons">
+                       <a href="#" class="btn btn-primary" onclick="openPlayer('dandadan')">
+  <i class="fas fa-play"></i> Watch Now
+</a>
+
+                     <a href="#" class="btn btn-secondary" onclick="openDandadanDetails()">
+  <i class="fas fa-info-circle"></i> Details
+</a>
+
+                    </div>
+                </div>
+            </div>
+<div class="carousel-item deathnote-bg">
+  <div class="hero-content">
+    <h1>Death Note</h1>
+    <p>
+      A high school student discovers a supernatural notebook
+      that grants him the power to kill anyone whose name he writes in it.
+    </p>
+    <div class="hero-buttons">
+      <a href="#" class="btn btn-primary" onclick="openPlayer('deathnote')">
+        <i class="fas fa-play"></i> Watch Now
+      </a>
+      <a href="#" class="btn btn-secondary" onclick="openDeathNoteDetails()">
+        <i class="fas fa-info-circle"></i> Details
+      </a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        
+    <!-- LEFT & RIGHT ARROWS -->
+    <div class="carousel-prev">&#10094;</div>
+    <div class="carousel-next">&#10095;</div>
+
+    <!-- Dots -->
+    
+        
+        <div class="carousel-nav-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+
+        </div>
+    </section>
+
+    <!-- POPULAR ANIME SECTION -->
+    <section id="popular" class="animate-on-scroll">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Popular Anime</h2>
+                <p>Discover the most popular anime series loved by millions of fans worldwide</p>
+            </div>
+            
+            <div class="anime-grid">
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BY2QzODA5OTQtYWJlNi00ZjIzLThhNTItMDMwODhlYzYzMjA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                     alt="My Hero Academia">
+                    <div class="anime-card-content">
+                        <h3>My Hero Academia</h3>
+                        <p>6 Seasons</p>
+                    </div>
+                    <div class="play-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                     alt="Attack on Titan">
+                    <div class="anime-card-content">
+                        <h3>Attack on Titan</h3>
+                        <p>4 Seasons</p>
+                    </div>
+                    <div class="play-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="anime-card">
+                    <img src="https://images.justwatch.com/poster/320272942/s718/season-3.jpg"
+                     alt="Demon Slayer">
+                    <div class="anime-card-content">
+                        <h3>Demon Slayer</h3>
+                        <p>3 Seasons</p>
+                    </div>
+                    <div class="play-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="anime-card">
+                    <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974709939/chainsaw-man-vol-1-9781974709939_hr.jpg"
+                     alt="Chainsaw Man">
+                    <div class="anime-card-content">
+                        <h3>Chainsaw Man</h3>
+                        <p>1 Season</p>
+                    </div>
+                    <div class="play-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                     alt="Jujutsu Kaisen">
+                    <div class="anime-card-content">
+                        <h3>Jujutsu Kaisen</h3>
+                        <p>2 Seasons</p>
+                    </div>
+                    <div class="play-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_.jpg"
+                     alt="One Piece">
+                    <div class="anime-card-content">
+                        <h3>One Piece</h3>
+                        <p>20+ Seasons</p>
+                    </div>
+                    <div class="play-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                     alt="Naruto">
+                    <div class="anime-card-content">
+                        <h3>Naruto</h3>
+                        <p>9 Seasons</p>
+                    </div>
+                    <div class="play-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="anime-card">
+                    <img src="https://images-cdn.ubuy.co.in/634e820b55e63b7bd829de96-poster-stop-online-death-note.jpg"
+                     alt="Death Note">
+                    <div class="anime-card-content">
+                        <h3>Death Note</h3>
+                        <p>1 Season</p>
+                    </div>
+                    <div class="play-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW RELEASES SECTION -->
+    <section id="new-releases" class="animate-on-scroll">
+        <div class="container">
+            <div class="section-heading">
+                <h2>New Releases</h2>
+                <p>Stay up to date with the latest episodes and newest anime series</p>
+            </div>
+            
+            <div class="new-releases-container">
+                <div class="new-release-card">
+                    <img src="https://i.pinimg.com/736x/73/a2/98/73a298d3dd2675ae0e3f9cd7972f254f.jpg"
+                     alt="Spy x Family Part 2">
+                    <div class="new-release-content">
+                        <h3>Spy x Family Part 2</h3>
+                        <p>The Forger family continues their hilarious adventures as they balance their secret lives.</p>
+                        <div>
+                            <span class="badge">New Episode</span>
+                            <span class="badge">Comedy</span>
+                        </div>
+                        <a href="#" class="watch-now-btn">Watch Now</a>
+                    </div>
+                </div>
+                
+                <div class="new-release-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNWFlNmJkN2YtNGRiZS00NjExLTlmNmEtYzdiMTdiZmMzYzAwXkEyXkFqcGc@._V1_.jpg"
+                     alt="Blue Lock">
+                    <div class="new-release-content">
+                        <h3>Blue Lock</h3>
+                        <p>Japan's top soccer players compete in an intense training program to create the ultimate striker.</p>
+                        <div>
+                            <span class="badge">New Episode</span>
+                            <span class="badge">Sports</span>
+                        </div>
+                        <a href="#" class="watch-now-btn">Watch Now</a>
+                    </div>
+                </div>
+                
+                <div class="new-release-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYzU3NDM4ZjgtY2UyMi00YTczLTgyNDEtMjBiMDJlOGUxNjcxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                     alt="Mob Psycho 100 III">
+                    <div class="new-release-content">
+                        <h3>Mob Psycho 100 III</h3>
+                        <p>Shigeo Kageyama continues to navigate his psychic powers and the challenges of adolescence.</p>
+                        <div>
+                            <span class="badge">New Episode</span>
+                            <span class="badge">Supernatural</span>
+                        </div>
+                        <a href="#" class="watch-now-btn">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GENRES SECTION -->
+    <section id="genres" class="animate-on-scroll">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Explore Genres</h2>
+                <p>Find your favorite anime by exploring different genres and categories</p>
+            </div>
+            
+            <div class="genre-grid">
+                <div class="genre-card">
+                    <div class="genre-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Action</h3>
+                    <p>High-energy battles and thrilling adventures</p>
+                </div>
+                
+                <div class="genre-card">
+                    <div class="genre-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Romance</h3>
+                    <p>Heartwarming love stories and relationships</p>
+                </div>
+                
+                <div class="genre-card">
+                    <div class="genre-icon">
+                        <i class="fas fa-laugh"></i>
+                    </div>
+                    <h3>Comedy</h3>
+                    <p>Hilarious situations and lighthearted fun</p>
+                </div>
+                
+                <div class="genre-card">
+                    <div class="genre-icon">
+                        <i class="fas fa-ghost"></i>
+                    </div>
+                    <h3>Supernatural</h3>
+                    <p>Mystical powers and otherworldly phenomena</p>
+                </div>
+                
+                <div class="genre-card">
+                    <div class="genre-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Sci-Fi</h3>
+                    <p>Futuristic technology and space adventures</p>
+                </div>
+                
+                <div class="genre-card">
+                    <div class="genre-icon">
+                        <i class="fas fa-fist-raised"></i>
+                    </div>
+                    <h3>Shonen</h3>
+                    <p>Young heroes and epic battles</p>
+                </div>
+                
+                <div class="genre-card">
+                    <div class="genre-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Fantasy</h3>
+                    <p>Magical worlds and mythical creatures</p>
+                </div>
+                
+                <div class="genre-card">
+                    <div class="genre-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Slice of Life</h3>
+                    <p>Everyday experiences and relatable stories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="why-us" class="animate-on-scroll">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Why Choose AniAnime</h2>
+                <p>The best platform for streaming your favorite anime series</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-tv"></i>
+                    <h3>HD Quality</h3>
+                    <p>Stream all anime in high definition with crystal clear quality</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Latest Episodes</h3>
+                    <p>Get access to the newest episodes just hours after they air in Japan</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Multi-Language</h3>
+                    <p>Enjoy anime with multiple subtitle and dub options</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Any Device</h3>
+                    <p>Watch on your phone, tablet, computer, or TV seamlessly</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-ban"></i>
+                    <h3>No Ads</h3>
+                    <p>Enjoy uninterrupted viewing with our premium ad-free experience</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-download"></i>
+                    <h3>Offline Viewing</h3>
+                    <p>Download episodes to watch later without an internet connection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="animate-on-scroll">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Contact Us</h2>
+                <p>Have questions or feedback? We'd love to hear from you</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>123 Anime Street, Tokyo, Japan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>support@anianime.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+81 123 456 7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">AniAnime</div>
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#popular">Popular</a>
+                <a href="#new-releases">New Releases</a>
+                <a href="#genres">Genres</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+            
+            <p>&copy; 2023 AniAnime. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </div>
+  <div id="jjk-details" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h2>Jujutsu Kaisen – Season 2</h2>
+
+    <p>
+      Jujutsu Kaisen Season 2 adapts the Hidden Inventory and Shibuya Incident arcs.
+      It follows Gojo’s past and the chaos in Shibuya.
+    </p>
+
+    <ul>
+      <li><b>Episodes:</b> 23</li>
+      <li><b>Studio:</b> MAPPA</li>
+      <li><b>Genre:</b> Action, Dark Fantasy</li>
+      <li><b>Release:</b> 2023</li>
+    </ul>
+
+    <button class="btn btn-primary">Watch Now</button>
+  </div>
+</div>
+<div id="aot-details" class="modal">
+  <div class="modal-content">
+
+    <span class="close">&times;</span>
+
+    <h2>Attack on Titan – Final Season</h2>
+
+    <p>
+      The epic conclusion to humanity’s fight for survival.
+      Eren Yeager’s final decision changes the fate of the world forever.
+    </p>
+
+    <ul>
+      <li><b>Episodes:</b> Final Chapters</li>
+      <li><b>Studio:</b> MAPPA</li>
+      <li><b>Genre:</b> Action, Drama, Dark Fantasy</li>
+      <li><b>Release:</b> 2023–2024</li>
+    </ul>
+
+    <button class="btn btn-primary">Watch Now</button>
+
+  </div>
+</div>
+<div id="demon-details" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h2>Demon Slayer: Entertainment District</h2>
+    <p>
+      Tanjiro and his friends investigate mysterious disappearances
+      in the entertainment district while facing powerful Upper Rank demons.
+    </p>
+
+    <ul>
+      <li><b>Episodes:</b> 11</li>
+      <li><b>Studio:</b> Ufotable</li>
+      <li><b>Genre:</b> Action, Supernatural</li>
+      <li><b>Release:</b> 2021–2022</li>
+    </ul>
+
+    <button class="btn btn-primary">Watch Now</button>
+  </div>
+</div>
+<div id="sakamoto-details" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h2>Sakamoto Days – Part 2</h2>
+    <p>
+      Legendary hitman Taro Sakamoto is forced back into action
+      as his past catches up with his peaceful family life.
+    </p>
+
+    <ul>
+      <li><b>Status:</b> Upcoming</li>
+      <li><b>Genre:</b> Action, Comedy</li>
+      <li><b>Theme:</b> Assassin, Family</li>
+    </ul>
+
+    <button class="btn btn-primary">Watch Now</button>
+  </div>
+</div>
+<div id="dandadan-details" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h2>Dandadan – Season 2</h2>
+    <p>
+      Momo and Okarun return to face cursed houses,
+      evil eyes, and bizarre paranormal threats.
+    </p>
+
+    <ul>
+      <li><b>Genre:</b> Supernatural, Sci-Fi</li>
+      <li><b>Arcs:</b> Cursed House, Evil Eye</li>
+      <li><b>Release:</b> 2025</li>
+    </ul>
+
+    <button class="btn btn-primary">Watch Now</button>
+  </div>
+</div>
+<div id="deathnote-details" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeDeathNoteDetails()">&times;</span>
+
+    <h2>Death Note</h2>
+
+    <p>
+      Light Yagami gains possession of the Death Note,
+      a notebook that allows him to kill anyone by writing their name.
+      A deadly battle of intellect begins with detective L.
+    </p>
+
+    <ul>
+      <li><b>Episodes:</b> 37</li>
+      <li><b>Studio:</b> Madhouse</li>
+      <li><b>Genre:</b> Thriller, Psychological, Supernatural</li>
+      <li><b>Release:</b> 2006–2007</li>
+    </ul>
+
+    <button class="btn btn-primary" onclick="openPlayer('deathnote')">
+      Watch Now
+    </button>
+  </div>
+</div>
+
+<!-- ===== GLOBAL TRAILER PLAYER ===== -->
+<div id="playerOverlay" class="player-overlay">
+  <video
+  id="trailerVideo"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata">
+</video>
+
+
+
+
+    <div class="player-overlay-content">
+        <span class="close" onclick="closePlayer()">&times;</span>
+        <button id="muteBtn" class="mute-btn" aria-pressed="false" aria-label="Mute toggle">
+            <i class="fas fa-volume-mute"></i>
+        </button>
+
+        <h1 id="playerTitle"></h1>
+
+    <div class="player-buttons">
+      <button class="btn btn-primary">
+        <i class="fas fa-play"></i> Watch Episode 1
+      </button>
+
+      <button class="btn btn-secondary">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+
+      <button class="btn btn-secondary">
+        <i class="fas fa-plus"></i> My List
+      </button>
+    </div>
+  </div>
+  
+</div>
+
+
+</body>
+</html>
