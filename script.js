@@ -1,9 +1,11 @@
 // ==== PRELOADER ====
-window.addEventListener('load', function() {
-  setTimeout(() => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) preloader.classList.add('hidden');
-  }, 1500);
+document.addEventListener('DOMContentLoaded', function () {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add('hidden');
+    }, 1000);
+  }
 });
 
 // ==== MOBILE MENU ====
