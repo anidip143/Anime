@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Popular Anime</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="popular.css">
+</head>
+<body>
+<body>
+
+<!-- BANNER -->
+<section class="anime-banner"
+  style="background-image:url('images/mha-banner.jpg')">
+
+  <div class="banner-overlay"></div>
+
+  <div class="banner-content">
+    <h1 class="anime-title">
+      My Hero Academia: Vigilantes
+    </h1>
+
+    <h2 class="anime-title-jp">
+      正义使者·我的英雄学院之非法英雄
+    </h2>
+
+    <div class="anime-meta">
+      <span>Audio: Japanese</span>
+      <span class="badge">PG13</span>
+      <span class="badge">2 seasons</span>
+    </div>
+
+    <div class="banner-actions">
+      <button class="watch-btn">
+        ▶ Watch S1: Ep 1
+      </button>
+
+      <div class="icon-btn">
+        ⓘ
+        <span>Details</span>
+      </div>
+
+      <div class="icon-btn">
+        ＋
+        <span>My List</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- MAIN -->
+<section class="episode-page">
+<!-- EPISODE HEADER -->
+<div class="episode-header">
+  <h2 class="episode-title">Episodes</h2>
+
+  <div class="episode-controls">
+    <div class="dropdown" id="seasonSelect">
+      Season 1 <span class="arrow">▼</span>
+    </div>
+
+    <div class="all-episodes">
+      All Episodes (<span id="episodeCount">13</span>)
+    </div>
+
+    <div class="dropdown" id="sortSelect">
+      Oldest <span class="arrow">▼</span>
+    </div>
+  </div>
+</div>
+
+  <!-- EPISODES -->
+  <div class="episode-list" id="episodeList">
+    <!-- episodes injected by JS -->
+  </div>
+
+  <!-- VIDEO PLAYER (HIDDEN INITIALLY) -->
+  <div class="video-player hidden" id="playerWrapper">
+    <video id="videoPlayer" controls></video>
+  </div>
+
+</section>
+
+<script src="popular.js"></script>
+</body>
+
+</body>
+</html>

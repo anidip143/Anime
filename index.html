@@ -83,9 +83,10 @@
                     <h1>Jujutsu Kaisen Season 2</h1>
                     <p>Witness the intense battles and gripping story of Jujutsu Sorcerers protecting humanity from curses.</p>
                     <div class="hero-buttons">
-                         <a href="#" class="btn btn-primary" onclick="openPlayer('jjk')">
+                        <a href="anime.html?anime=jjk" class="btn btn-primary">
   <i class="fas fa-play"></i> Watch Now
 </a>
+
 
                        <a href="#" class="btn btn-secondary" onclick="openJJKDetails()">
   <i class="fas fa-info-circle"></i> Details
@@ -100,9 +101,7 @@
                     <h1>Attack on Titan Final Season</h1>
                     <p>The epic conclusion to humanity's fight for survival against the Titans.</p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary" onclick="openPlayer('aot')">
-  <i class="fas fa-play"></i> Watch Now
-</a>
+                       <a href="anime.html?anime=aot" class="btn btn-primary">Watch Now</a>
 
                        <a href="#" class="btn btn-secondary" onclick="openAOTDetails()">
   <i class="fas fa-info-circle"></i> Details
@@ -117,10 +116,7 @@
                     <h1>Demon Slayer: Entertainment District</h1>
                     <p>Tanjiro and his friends investigate the mysterious disappearances in the entertainment district.</p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary" onclick="openPlayer('demon')">
-  <i class="fas fa-play"></i> Watch Now
-</a>
-
+                       <a href="anime.html?anime=demon" class="btn btn-primary">Watch Now</a>
                        <a href="#" class="btn btn-secondary" onclick="openDemonSlayerDetails()">
   <i class="fas fa-info-circle"></i> Details
 </a>
@@ -134,10 +130,7 @@
                     <h1>Sakamoto Days Part 2</h1>
                     <p>The story follows Taro Sakamoto, a legendary hitman who retired from his violent past after falling in love with Aoi, his wife. He has built a new, peaceful life for himself and his family by opening a convenience store. However, when his past comes back to haunt him, he must once again engage in over-the-top, no-holds-barred battles to protect his loved ones from assassins.  </p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary" onclick="openPlayer('sakamoto')">
-  <i class="fas fa-play"></i> Watch Now
-</a>
-
+                       <a href="anime.html?anime=sakamoto" class="btn btn-primary">Watch Now</a>
 
                        <a href="#" class="btn btn-secondary" onclick="openSakamotoDetails()">
   <i class="fas fa-info-circle"></i> Details
@@ -152,10 +145,7 @@
                     <h1>Dandadan season 2</h1>
                     <p>The second season covered the "Cursed House" and "Evil Eye" arcs from the original manga. It followed high schoolers Momo and Okarun as they continued to challenge paranormal and extraterrestrial entities with their newfound powers. </p>
                     <div class="hero-buttons">
-                       <a href="#" class="btn btn-primary" onclick="openPlayer('dandadan')">
-  <i class="fas fa-play"></i> Watch Now
-</a>
-
+                       <a href="anime.html?anime=dandadan" class="btn btn-primary">Watch Now</a>
                      <a href="#" class="btn btn-secondary" onclick="openDandadanDetails()">
   <i class="fas fa-info-circle"></i> Details
 </a>
@@ -171,8 +161,7 @@
       that grants him the power to kill anyone whose name he writes in it.
     </p>
     <div class="hero-buttons">
-      <a href="#" class="btn btn-primary" onclick="openPlayer('deathnote')">
-        <i class="fas fa-play"></i> Watch Now
+     <a href="anime.html?anime=deathnote" class="btn btn-primary">Watch Now</a>
       </a>
       <a href="#" class="btn btn-secondary" onclick="openDeathNoteDetails()">
         <i class="fas fa-info-circle"></i> Details
@@ -210,7 +199,8 @@
             </div>
             
             <div class="anime-grid">
-                <div class="anime-card">
+              <div class="anime-card" onclick="goPopular('mha')">
+
                     <img src="https://m.media-amazon.com/images/M/MV5BY2QzODA5OTQtYWJlNi00ZjIzLThhNTItMDMwODhlYzYzMjA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
                      alt="My Hero Academia">
                     <div class="anime-card-content">
@@ -222,7 +212,8 @@
                     </div>
                 </div>
                 
-                <div class="anime-card">
+              <div class="anime-card" onclick="goPopular('aot')">
+
                     <img src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
                      alt="Attack on Titan">
                     <div class="anime-card-content">
@@ -234,7 +225,8 @@
                     </div>
                 </div>
                 
-                <div class="anime-card">
+             <div class="anime-card" onclick="goPopular('demon')">
+
                     <img src="https://images.justwatch.com/poster/320272942/s718/season-3.jpg"
                      alt="Demon Slayer">
                     <div class="anime-card-content">
@@ -246,7 +238,7 @@
                     </div>
                 </div>
                 
-                <div class="anime-card">
+                <div class="anime-card" onclick="goPopular('chainsaw')">
                     <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974709939/chainsaw-man-vol-1-9781974709939_hr.jpg"
                      alt="Chainsaw Man">
                     <div class="anime-card-content">
@@ -258,7 +250,8 @@
                     </div>
                 </div>
                 
-                <div class="anime-card">
+                <div class="anime-card" onclick="goPopular('jjk')">
+
                     <img src="https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
                      alt="Jujutsu Kaisen">
                     <div class="anime-card-content">
@@ -270,7 +263,8 @@
                     </div>
                 </div>
                 
-                <div class="anime-card">
+               <div class="anime-card" onclick="goPopular('onepiece')">
+
                     <img src="https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_.jpg"
                      alt="One Piece">
                     <div class="anime-card-content">
@@ -282,7 +276,7 @@
                     </div>
                 </div>
                 
-                <div class="anime-card">
+                <div class="anime-card" onclick="goPopular('naruto')">
                     <img src="https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
                      alt="Naruto">
                     <div class="anime-card-content">
@@ -294,7 +288,8 @@
                     </div>
                 </div>
                 
-                <div class="anime-card">
+               <div class="anime-card" onclick="goPopular('deathnote')">
+
                     <img src="https://images-cdn.ubuy.co.in/634e820b55e63b7bd829de96-poster-stop-online-death-note.jpg"
                      alt="Death Note">
                     <div class="anime-card-content">
@@ -601,7 +596,10 @@
       <li><b>Release:</b> 2023</li>
     </ul>
 
-    <button class="btn btn-primary">Watch Now</button>
+   <button class="btn btn-primary watch-now-btn" data-anime="jjk">
+  Watch Now
+</button>
+
   </div>
 </div>
 <div id="aot-details" class="modal">
@@ -623,7 +621,10 @@
       <li><b>Release:</b> 2023–2024</li>
     </ul>
 
-    <button class="btn btn-primary">Watch Now</button>
+    <button class="btn btn-primary watch-now-btn" data-anime="aot">
+  Watch Now
+</button>
+
 
   </div>
 </div>
@@ -644,7 +645,10 @@
       <li><b>Release:</b> 2021–2022</li>
     </ul>
 
-    <button class="btn btn-primary">Watch Now</button>
+    <button class="btn btn-primary watch-now-btn" data-anime="demon">
+  Watch Now
+</button>
+
   </div>
 </div>
 <div id="sakamoto-details" class="modal">
@@ -663,7 +667,10 @@
       <li><b>Theme:</b> Assassin, Family</li>
     </ul>
 
-    <button class="btn btn-primary">Watch Now</button>
+   <button class="btn btn-primary watch-now-btn" data-anime="sakamoto">
+  Watch Now
+</button>
+
   </div>
 </div>
 <div id="dandadan-details" class="modal">
@@ -682,7 +689,10 @@
       <li><b>Release:</b> 2025</li>
     </ul>
 
-    <button class="btn btn-primary">Watch Now</button>
+    <button class="btn btn-primary watch-now-btn" data-anime="dandadan">
+  Watch Now
+</button>
+
   </div>
 </div>
 <div id="deathnote-details" class="modal">
@@ -704,9 +714,10 @@
       <li><b>Release:</b> 2006–2007</li>
     </ul>
 
-    <button class="btn btn-primary" onclick="openPlayer('deathnote')">
-      Watch Now
-    </button>
+   <button class="btn btn-primary watch-now-btn" data-anime="deathnote">
+  Watch Now
+</button>
+
   </div>
 </div>
 
@@ -721,10 +732,7 @@
   preload="metadata">
 </video>
 
-
-
-
-    <div class="player-overlay-content">
+<div class="player-overlay-content">
         <span class="close" onclick="closePlayer()">&times;</span>
         <button id="muteBtn" class="mute-btn" aria-pressed="false" aria-label="Mute toggle">
             <i class="fas fa-volume-mute"></i>

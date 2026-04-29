@@ -107,9 +107,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ==== CARD INTERACTIONS ====
-document.querySelectorAll('.anime-card').forEach(card =>
-  card.addEventListener('click', () => alert(`Opening ${card.querySelector('h3')?.textContent}`))
-);
+
 document.querySelectorAll('.genre-card').forEach(card =>
   card.addEventListener('click', () => alert(`Showing ${card.querySelector('h3')?.textContent} anime`))
 );
@@ -389,3 +387,22 @@ function closePlayer() {
     });
   });
 })();
+// ===== UNIVERSAL WATCH NOW HANDLER =====
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest(".watch-now-btn");
+  if (!btn) return;
+
+  const animeKey = btn.dataset.anime;
+  if (!animeKey) return;
+
+  // Close any open modal
+  document.querySelectorAll(".modal").forEach(m => {
+    m.style.display = "none";
+  });
+
+  // Navigate to anime page
+  window.location.href = `anime.html?anime=${animeKey}`;
+});
+function goPopular(key) {
+  window.location.href = `popular.html?anime=${key}`;
+}

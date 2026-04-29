@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Episodes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="anime.css">
+</head>
+<body>
+<!-- Background Video -->
+<div class="bg-video-wrapper">
+  <video id="bgVideo" autoplay muted loop playsinline>
+  <source src="" type="video/mp4">
+</video>
+
+  <div class="bg-glass"></div>
+</div>
+
+<!-- BANNER -->
+<section class="anime-banner">
+  <div class="banner-content">
+    <h1 id="animeTitle"></h1>
+    <p id="animeDesc"></p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="episode-page">
+
+  <!-- VIDEO PLAYER -->
+  <div class="video-player">
+    <video id="episodeVideo" controls autoplay></video>
+  </div>
+
+  <!-- EPISODE LIST -->
+  <div class="episode-list" id="episodeList">
+    <!-- episodes injected by JS -->
+  </div>
+
+</section>
+
+<script src="anime.js"></script>
+</body>
+</html>
